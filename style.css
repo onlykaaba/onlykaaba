@@ -15,29 +15,6 @@
     src: url(/resources/saans-font-family/Saans-TRIAL-Light.otf);
 }
 
-
-
-
-
-
-.image{
-    height: 360px;
-    width: 100%;
-    grid-column: span 1;
-
-}
-
-
-.image img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Use 'contain' to show full image without cropping */
-  display: block;
-  overflow: hidden;
-
-}
-
-
 a{
     text-decoration: none;
     color: #0e9594;
@@ -49,6 +26,7 @@ a{
     color: rgb(126, 124, 124);
     line-height: 150%;
     grid-column: span 2;
+    margin-bottom: 1rem;
 
 }
 
@@ -92,14 +70,13 @@ main{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     justify-items: stretch;
-    gap: 0 24px;
+    gap: 48px 16px;
     height: fit-content;
     width: 100%;
+    padding: clamp(1.2rem , 5vw , 2rem);
 }
 
-section{
-    padding: clamp(0.4rem ,5vw ,1.2rem);
-}
+
 
 .intro{
     grid-column: span 3;
@@ -135,21 +112,28 @@ header{
 
 
 /* hero section */
+
+
+
+
+
 .Hero-container{
-    background-color: #f9ffc6;
-    padding: clamp(0.4rem ,5vw ,1.2rem);
-}
-
-
-
-
-/* .Hero-container{
  display: grid;
  grid-template-columns: repeat(4 1fr);
  gap:  16px;
- height: fit-content;
-} */
+} 
 
+
+.image{
+    max-height: 600px;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Use 'contain' to show full image without cropping */
+  overflow: hidden;
+}
 
 .text-box{
     display: flex;
@@ -158,9 +142,7 @@ header{
    
 }
 
-.All-work-section{
-    border-right: 1px solid #1d201f;
-}
+
 
 
 .About-section{
@@ -173,25 +155,37 @@ header{
     gap: 16px;
 }
 
-.who-we-are{
-    grid-column: span 3;
+
+
+.story{
+    grid-column: span 1;
 }
 
 .who-we-are-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 16px;
+}
 
+.who-we-are-heading{
+    grid-column: span 3;
+}
+.who-we-are-text-1 {
+    grid-column: span 3;
+}
+
+.who-we-are-text-2 {
+    grid-column: span 3;
 }
 
 
 
 
-footer{
+/* footer{
    
     height: 40%;
 }
-
+ */
 
 
 
@@ -245,7 +239,7 @@ footer{
  }
 
  .Hero-text{
-    grid-column: span 3;
+    grid-column: span 2;
  }
 
  .about-me{
@@ -256,30 +250,22 @@ footer{
     display: none; /* Hidden on screens wider than 768px */
   }
 
+  .story{
+    grid-column: span 4;
+}
+
  
 
- .story{
-    grid-column: span 3;
- }
+ 
 
  .About-container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
 }
 
-.who-we-are-heading{
-    grid-column: span 3;
-}
 
-.who-we-are-text-1 {
-   grid-column: span 2;
 
-}
 
-.who-we-are-text-2 {
-   grid-column: span 2;
-
-}
 
 }
 
@@ -290,14 +276,26 @@ footer{
     grid-column: span 2;
  }
 
- .filler{
-    display: none;
- }
 
-.
-.i-line{
-    padding: 1rem;
+ .story{
+    grid-column: span 3;
 }
+
+.who-we-are-heading{
+    grid-column: span 3;
+}
+.who-we-are-text-1 {
+    grid-column: span 1;
+}
+
+.who-we-are-text-2 {
+    grid-column: span 1;
+}
+
+
+
+
+
 
 
 
@@ -309,9 +307,6 @@ footer{
 
 @media (min-width: 1024px){
 
-     .filler{
-    display: none;
- }
 
     
 }
