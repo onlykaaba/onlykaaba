@@ -33,7 +33,8 @@ a{
 h1{
     font-family: 'saans';
     font-size: clamp(64px , 5vw, 96px);
-    line-height: 90%;
+    line-height: 110%;
+    letter-spacing: -2px;
     margin-bottom: 1.4rem;
 }
 
@@ -57,7 +58,7 @@ h5{
 
 
 html body{
-    font-family:'satoshi' ;
+    font-family:'saans' ;
     font-weight: normal;
     color: #1d201f;
     overflow-x: hidden;
@@ -70,7 +71,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     justify-items: stretch;
-    gap: 48px 16px;
+    gap: 48px 24px;
     height: fit-content;
     width: 100%;
     padding: clamp(1.2rem , 5vw , 2rem);
@@ -109,7 +110,10 @@ header{
     color: #1d201f;
 }
 
-
+.case-study-item {
+    list-style-type: none;
+    font-family: 'saans';
+}
 
 /* hero section */
 
@@ -123,6 +127,10 @@ header{
  gap:  16px;
 } 
 
+
+div > img{
+    width: 100%;
+}
 
 .image{
     max-height: 600px;
@@ -158,13 +166,11 @@ header{
 
 
 .story{
-    grid-column: span 1;
+   grid-column: 2 / 3;
 }
 
 .who-we-are-container {
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    gap: 16px;
+   grid-column: span 2;
 }
 
 .who-we-are-heading{
@@ -231,7 +237,11 @@ header{
 
 
  .Hero-container{
-    grid-column: span 3;
+    grid-column: span 4;
+ }
+
+ .story{
+    grid-column: span 4;
  }
 
  .All-work-section{
@@ -250,9 +260,7 @@ header{
     display: none; /* Hidden on screens wider than 768px */
   }
 
-  .story{
-    grid-column: span 4;
-}
+
 
  
 
@@ -271,29 +279,6 @@ header{
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
- .Hero-container{
-    grid-column: span 2;
- }
-
-
- .story{
-    grid-column: span 3;
-}
-
-.who-we-are-heading{
-    grid-column: span 3;
-}
-.who-we-are-text-1 {
-    grid-column: span 1;
-}
-
-.who-we-are-text-2 {
-    grid-column: span 1;
-}
-
-
-
 
 
 
