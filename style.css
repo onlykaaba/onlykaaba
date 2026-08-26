@@ -17,36 +17,84 @@
 
 a{
     text-decoration: none;
-    color: #0e9594;
+    color: #3d3a4b;
 }
 
 .paragraph{
     font-family: 'saans-light';
-    font-weight: 600;
-    color: rgb(126, 124, 124);
+    font-weight: 300;
     line-height: 150%;
     grid-column: span 2;
     margin-bottom: 1rem;
+   
+
+}
+
+
+
+.menu-dropdown-list{
+    list-style-type: none;
+    height: 100%;
+    background-color: #d0f4de;
+    z-index: 1000;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 0;
+    padding-top: 40px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.menu-dropdown-list.active {
+    transform: translateX(0);
+}
+
+.menu-list-item {
+    font-size: clamp(1rem , 5vw , 1.6rem );
+    padding: 0.6rem;
+    width: 100%;
+}
+
+
+.cancel-icon {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
 
 }
 
 h1{
     font-family: 'saans';
     font-size: clamp(64px , 5vw, 96px);
-    line-height: 110%;
-    letter-spacing: -2px;
-    margin-bottom: 1.4rem;
+    line-height: 100%;
+    letter-spacing: -3px;
+    margin: 1.4rem 0 ;
+    font-weight: 500;
 }
 
 h2{
 
    font-family: 'saans';
-   margin-bottom: 1rem;
+   font-weight: 200;
+   font-size:clamp( 40px ,5vw, 56px);
+   letter-spacing: -1px;
+  
+}
+
+h3{
+    font-weight: 100;
+    font-size: clamp(16px ,5vw, 24px);
 }
 
 h4{
     font-family: 'saans';
     margin-bottom: 1rem;
+    font-weight: 300;
 
 }
 
@@ -60,9 +108,8 @@ h5{
 html body{
     font-family:'saans' ;
     font-weight: normal;
-    color: #1d201f;
+    color: #3d3a4b;
     overflow-x: hidden;
-    margin-top: 80px;
     height: fit-content;
 }
 
@@ -71,10 +118,11 @@ main{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     justify-items: stretch;
-    gap: 48px 24px;
+    gap: 24px 24px;
     height: fit-content;
     width: 100%;
-    padding: clamp(1.2rem , 5vw , 2rem);
+    padding: 0 24px ;
+    margin-top: 80px;
 }
 
 
@@ -92,33 +140,47 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 1.2rem;
+    padding: 1.8rem;
     width: 100%;
     position: fixed;
     top: 0;
     font-family: 'saans';
     background-color: white;
-    border-bottom: 1px solid #1d201f;
+    z-index: 100;
+    
 }
 .menu{
     display: flex;
     list-style-type: none;
 }
 
-.menu-item{
+
+.menu-item {
     margin-left: 1rem;
-    color: #1d201f;
+    color: #3d3a4b;
 }
 
-.case-study-item {
-    list-style-type: none;
-    font-family: 'saans';
+
+
+
+.menu-icon{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
 }
+
+
+
 
 /* hero section */
 
 
-
+.Section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 50%;
+}
 
 
 .Hero-container{
@@ -130,17 +192,23 @@ header{
 
 div > img{
     width: 100%;
+    height: 100%;
+    
 }
 
 .image{
     max-height: 600px;
+    
 }
+
+
 
 .image img{
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Use 'contain' to show full image without cropping */
-  overflow: hidden;
+  object-fit: cover;
+  object-position: 20% 40%;
+  
 }
 
 .text-box{
@@ -162,36 +230,104 @@ div > img{
     grid-template-columns: repeat(3 ,1fr);
     gap: 16px;
 }
+.aboutt{
+    color: #136f63;
+}
 
 
 
 .story{
-   grid-column: 2 / 3;
+   grid-column: 2 / 4;
 }
 
+
+
+
 .who-we-are-container {
-   grid-column: span 2;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 24px;
+   margin-top: 80px;
 }
 
 .who-we-are-heading{
     grid-column: span 3;
 }
 .who-we-are-text-1 {
-    grid-column: span 3;
+    grid-column: span 1;
 }
 
 .who-we-are-text-2 {
-    grid-column: span 3;
+    grid-column: span 1;
+    align-self: end;
+    
 }
 
 
 
 
-/* footer{
+
+.shop{
+    min-height: 100vh;
+    background-color: #d0f4de;
+    margin-top: 80px;
+}
+
+.shop > .container {
+    position: relative;
+    height: 100%;
+}
+
+
+.coming-soon-h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.client-details{
+    overflow: hidden;
+}
+
+.client-details h3 {
+    background-color: #33302C;
+    color: #F4F1EB;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.tools{
+   grid-column: 2 / 4;
+   margin-top: 80px;
+
+}
+
+.tools-container{
+    display: flex;
+    gap: 16px;
+    align-items: top;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+}
+
+
+.tools-container >img{
+    width: 60px;
+    padding: 0.4rem;
+    
    
-    height: 40%;
 }
- */
+
+
+
+footer{
+    /* background-color: #d0f4de; */
+    height: 30dvh;
+}
+
 
 
 
@@ -260,16 +396,36 @@ div > img{
     display: none; /* Hidden on screens wider than 768px */
   }
 
-
-
- 
-
- 
-
  .About-container{
     display: grid;
     grid-template-columns: repeat(1,1fr);
 }
+
+.all-work{
+    display: none;
+}
+
+.who-we-are-text-1 {
+    grid-column: span 2;
+}
+
+.who-we-are-text-2 {
+    grid-column: span 2;
+}
+
+.client-details {
+    grid-column: span 3;
+
+}
+
+.tools{
+   grid-column: 1 / 4;
+   margin-top: 80px;
+
+}
+
+
+
 
 
 
@@ -280,7 +436,9 @@ div > img{
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-
+.Hero-container {
+    grid-column: 2 / 4;
+}
 
 
 
@@ -292,6 +450,8 @@ div > img{
 
 @media (min-width: 1024px){
 
-
+ .menu-icon{
+    display: none;
+ }
     
 }
