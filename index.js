@@ -1,6 +1,7 @@
 const toggleBtn = document.getElementById('menu-icon');
 const menu = document.getElementById('menu-dropdown-list');
 const close = document.getElementById('cancel-icon');
+const toolscontainer = document.getElementById('tools-container-one');
 
 
 toggleBtn.addEventListener('click', () => {
@@ -10,6 +11,13 @@ toggleBtn.addEventListener('click', () => {
 close.addEventListener('click', () => {
     menu.classList.remove('active');
 })
+
+
+
+
+
+
+ 
 
 
 
